@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/setrecord/setrecord",
+    
+    
+    "pages/login/login",   
+    
+    "pages/checkRecord/checkRecord",    
+    "pages/setInfo/setInfo",       
+    "pages/settings/setting",                 
+    "pages/search/search",    
+    "pages/order/order",
+    "pages/part/comList/comList",
+    "pages/me/me",
+    "pages/logs/logs",
+    "pages/navBar/navBar",
+    "pages/part/todoList/todoList" 
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    
+    "navigationStyle": "custom"
+  },
+  "sitemapLocation": "sitemap9.json"
+}

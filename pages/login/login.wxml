@@ -1,0 +1,36 @@
+<!--pages/login/login.wxml-->
+<view class="container bgF">
+<!-- 自定义头部 -->
+  <view class='nav bg-white'>
+    <navBar background='#1890FF' color="#fff">
+    
+      </navBar>
+  </view>
+  <view class="loginBg">
+    <image class="loginImg"  src="../../img/login_bg.png"></image> 
+  </view>
+  <view class="loginB"> 
+    <van-cell-group>
+      <van-field
+         value="{{ phoneNum }}" 
+         clearable
+         label="账号"
+         placeholder="请输入手机号码"
+         bind:change="onChangePhone"
+      />
+      <view class="pd1"></view>
+      <van-field
+        value="{{ password }}"
+        type="password"
+        label="密码"
+        placeholder="请输入密码" 
+        border="{{ false }}"
+        bind:change="onChangePw"
+        border="{{true}}"
+      />
+    </van-cell-group>
+  </view>
+  <view class="loginB">
+    <van-button type="info" block bindtap="tolist">登录</van-button>
+  </view>
+</view>

@@ -1,0 +1,158 @@
+/* pages/order/order.wxss */
+.hasTop{
+  margin:20rpx 0rpx;
+  background: #fff; 
+}
+.hasTop1{
+  margin:10rpx 0rpx;
+}
+.secTitle{
+  height: auto;
+  line-height: 50rpx;
+  font-weight: bold;
+  font-size: 36rpx;
+  padding: 10rpx 0;
+  /* overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap; */
+}
+.itemBox{
+  margin: 10rpx 0;
+}
+.proT{
+  line-height: 60rpx;
+  padding: 10rpx ;
+}
+.van-cell{
+  padding:15rpx 0rpx!important;
+  font-size: 32rpx!important;
+}
+.xxP{
+  vertical-align: bottom;
+  font-weight: bold;
+  font-size: 32rpx!important;
+}
+.showNotice{
+  position: relative;
+  width: 46rpx;
+  height: 60rpx;  
+  margin-left:10rpx; 
+  display:inline-block;             
+  justify-content: center;
+  align-items:center;
+  padding: 6rpx 0;
+   vertical-align: bottom;
+}
+.stateIcon{
+  position: absolute;
+  width: 46rpx;
+  height:46rpx;
+  top:6rpx;
+  left:0;
+}
+
+.van-collapse-item__content{ 
+  /* background: #FFF2D9!important; */
+  font-weight: normal!important;
+}
+.halfB{
+  display: inline-block;
+  width: 330rpx;
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+  border-radius: 35rpx;
+  font-size: 32rpx;
+  border:1px solid #DDDDDD;
+  margin:0rpx 5.5rpx;
+}
+.hasChoice{
+  color: #1890FF;
+  border-color: #1890FF;
+}
+.titleLine{
+  display: block;
+  height: 40rpx;
+  padding-left:20rpx;
+  line-height: 40rpx;
+  border-left:8rpx solid #1890FF;
+
+}
+.addVideobtn{
+  position: relative;
+  width: 220rpx;
+  height: 80rpx;
+  border:1px solid #ddd;
+  line-height: 80rpx;
+  padding-left: 60rpx;
+  border-radius:5rpx;
+  margin-top: 10rpx;
+}
+.iconMkf{
+  position: absolute;
+  width: 24rpx;
+  height:40rpx;
+  top:20rpx;
+  left:18rpx;
+}
+/** 录音部分颜色**/
+.popBox{
+  width: 520rpx;
+  height: 520rpx;
+  background: #FFF;
+  padding: 20rpx;
+
+}
+.popTitle{
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+}
+.timeBox{
+  height: 80rpx;
+  line-height:80rpx;
+  margin-top: 70rpx;
+  font-size:56rpx;
+  font-weight:500;
+  color:#000;
+  text-align: center;
+}
+.limitText{
+  line-height: 50rpx;
+  font-size: 32rpx;
+  color:#999;
+  line-height: 50rpx;
+  text-align: center;
+}
+.editBox{
+  position: relative;
+  height: 120rpx;
+  margin-top: 60rpx;
+  text-align: center;
+}
+.iconVideo{ 
+  width: 120rpx;
+  height: 120rpx;
+  margin:0 15rpx;
+}
+.setBtn{
+  width: 320rpx;
+  margin: 0 8rpx;
+}
+.videoList{
+  color:#666;
+  font-size: 28rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-bottom: 1px solid #EEEEEE;
+}
+.imgBox{
+  position: relative;
+  height: auto;
+}
+.listImg{
+  width: 160rpx;
+  height: 160rpx;
+  margin: 10rpx;
+  float:left;
+}

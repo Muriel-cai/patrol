@@ -1,0 +1,15 @@
+<!--pages/me/me.wxml-->
+<view class="container" style='margin-top: {{navH}}px'>
+  <view class="userinfo blockB bgF">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+    <view class="box710 cellT color3"> 
+      <image class="wximg" src="../../img/icon_wechat.png" ></image>
+       微信绑定
+      <text class="rightp {{hasUserInfo}} ?'colorG' : 'colorO' ">{{stateText}} </text>
+      </view>
+  </view>
+</view>

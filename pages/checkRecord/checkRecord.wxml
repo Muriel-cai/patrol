@@ -1,0 +1,33 @@
+<!--pages/checkRecord/checkRecord.wxml-->
+
+<view class="container bgF" >
+ <view class='nav bg-white'>
+    <navBar background='#fff' title="监管评价"  back="{{true}}" home="{{false}}" bindback="handerback" bindhome="handerhome">    
+      </navBar>
+  </view>
+  <view class="blockB hasTop">
+    <view class="scoreBox" wx:if="{{false}}">
+      <view class="h1">{{score}}</view>
+      <view class="p">本次巡查得分</view>
+    </view>
+  </view>
+    <view class="box690 ">    
+      <view class="title"> 本次问题登记（简短描述） </view>
+      <view class="p">{{evaluation}}</view>  
+    </view>   
+    <view class="border"></view>  
+    <view class="box710 " wx:if="{{isAdjust == 1}}">
+      <van-cell title="是否需要整改" value="是" />          
+    </view>
+    <view class="box710 " wx:elif="{{isAdjust == 0}}">
+      <van-cell title="是否需要整改" value="否" />          
+    </view>
+    <view class="box710 " wx:if="{{isAdjust == 1}}">
+      <van-cell title="整改截至日期" value="{{jzTime}}" />          
+    </view>
+    <view class="box690 ">
+      <view class="title"> 总体评价（简短描述） </view>
+      <view class="p">{{problemvalue}}</view>   
+    </view>
+</view>
+

@@ -1,0 +1,76 @@
+/**app.wxss**/
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  box-sizing: border-box;
+  background: #F9F9F9;
+} 
+.blockB{
+  position: relative;
+  width: 750rpx;
+  padding: 0 0rpx;
+}
+.box710{
+  position: relative;
+  width: 710rpx;
+  margin: 0 auto;
+  
+}
+.box690{
+  position: relative;
+  width: 690rpx;
+  height:auto;
+  margin: 0 auto;
+}
+.box680{
+  width: 680rpx;
+  height: 100rpx;
+  margin-top: 60rpx;
+}
+.hasShadow{
+  box-shadow:0px 3px 10px rgba(0,0,0,0.04)
+}
+.box650{
+  position: relative;
+  width: 650rpx;
+  margin: 0 auto;
+  
+}
+.box520{
+  position: relative;
+  width: 520rpx;
+  margin: 0 auto;
+  
+}
+.padd30{
+  padding-bottom: 30rpx;
+}
+.bgF{
+  background: #fff;
+}
+.color3{
+  color:#333;
+}
+.color6{
+  color: #666;
+}
+.color9{
+  color: #999;
+}
+.colorF{
+  color:#fff;
+}
+.colorO{
+  color: #E8A915;
+}
+.colorR{
+  color:#FF5757;
+}
+.colorG{
+  color: #4AC366;
+}

@@ -1,0 +1,17 @@
+/* pages/setInfo/setInfo.wxss */
+.hasTop{
+  margin:20rpx 0rpx;
+  background: #fff; 
+}
+.van-cell__title,{
+  -webkit-flex: 1;
+  flex: 1;
+  max-width:100rpx; 
+}
+.van-cell__value {
+  -webkit-flex:1;
+  flex:1;
+  min-width:500rpx; 
+  text-align: left !important;
+  color: #333!important;
+}

@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="container">
+<!-- 自定义头部 -->
+  <view class='nav bg-white'>
+    <navBar background='#fff' searchText="{{searchText}}" toSearchBar="{{true}}" bindtoSearch="handerToSearch" >
+    
+      </navBar>
+  </view>
+
+  <view class="blockB" >
+    <van-tabs active="{{active}}"  border="false" color="#1890FF" title-active-color="#1890FF"  bind:change="onChange" >
+      <van-tab title="{{item.text}}"  wx:for="{{orderData}}" data-type="{{item.tab}}" data-item="item" data-index="idx">
+      </van-tab>    
+    </van-tabs>
+     <view class="conBox box710"  wx:for="{{content}}" wx:for-item="list" wx:for-index="cellindex">
+        <comList 
+        id="{{list.id}}"
+        organId="{{list.organId}}"
+        title="{{list.organName}}" 
+        state='{{tabState}}' 
+        time="{{list.startTime}}" 
+        busiState="{{list.busiState}}"
+        terminationTime = "{{list.adjustEndTime}}" 
+        bindtoNext="toNext"
+        /> 
+     </view> 
+  </view>
+ 
+  <view class="addCase" bindtap="addCase">
+  <image  class="addIcon" src="../../img/tab_xfadd.png" mode="cover"></image> </view>
+  <!-- <van-button type="primary">主要按钮</van-button> -->
+</view>

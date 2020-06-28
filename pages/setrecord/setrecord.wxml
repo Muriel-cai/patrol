@@ -1,0 +1,101 @@
+<!--pages/setrecord/setrecord.wxml-->
+<view class="container bgF" >
+ <view class='nav bg-white'>
+    <navBar background='#fff' title="监管评价"  back="{{true}}" home="{{false}}" bindback="handerback" bindhome="handerhome">    
+      </navBar>
+  </view>
+  <view class="blockB hasTop">
+    <view class="scoreBox" wx:if="{{false}}">
+      <view class="h1">{{score}}</view>
+      <view class="p">本次巡查得分</view>
+    </view>
+    <view class="box690 ">
+      <!-- <van-cell value="" >
+        <view slot="title">
+          <view class="van-cell-text">单元格</view>
+        </view>
+      </van-cell> -->
+      <van-cell title="本次问题登记（简短描述）" border="{{false}}"></van-cell>
+      <view class="box690 ">
+        <van-cell-group>
+          <van-field
+            value="{{ problemvalue}}"
+            placeholder="请简短描述"
+            type="textarea"
+            autosize	
+            bind:change="onChange"         
+            input-class="textarea"
+          />
+        </van-cell-group>
+      </view>
+    </view>
+  </view>
+        <view class="blockB  bgF8  lineBox"> </view>
+        <view class="box650 orNotBox">
+           <text>是否需要整改 </text>
+          
+           <view class="setorNot" bindtap="setSel" data-type="0"> 
+              <image class="iconYN" src="../../img/{{openNum == 0 ? 'icon_yer':'icon_no'}}.png" bindtap="packUp" ></image>否
+           </view>
+            <view class="setorNot" bindtap="setSel" data-type="1">
+              <image class="iconYN" src="../../img/{{openNum == 1 ? 'icon_yer':'icon_no'}}.png" bindtap="packUp"></image>
+           
+           是 </view>
+        </view>
+        <view class="box690" wx:if="{{openNum == 1}}">     
+          <van-cell-group adjust-position ="false">
+             <van-cell 
+              title="整改截至时间" 
+              value="{{ jzTime || '请选择时间'}} "  
+              bind:click="getTime"            
+              />
+            <!-- <van-field
+              value="{{ jzTime }}"
+              placeholder="请选择巡查时间"        
+              bind:focus="getTime"
+              label="整改截至时间"
+             
+              input-align="right"
+            /> -->
+          </van-cell-group>
+        </view>
+        <view class="box680 bgF8 noteText">
+          备注：发现问题一次整改后，以再犯作为情节严重形式，将采取相应监管措施！
+        </view>
+        
+      <view class="box710 ">
+        <van-cell title="总体评价（简短描述）" border="{{false}}"></van-cell>
+        <van-cell-group>
+          <van-field
+            value="{{ evaluation}}"
+            placeholder="请简短描述"
+            type="textarea"
+            autosize	
+            bind:change="onChange1"         
+            input-class="textarea"
+          />
+        </van-cell-group>
+      </view>
+     
+  <view class="box680 " wx:if="{{isOver == false }}" >
+    <van-button type="info" block  bindtap="getSubmit">完成</van-button>
+  </view>
+
+    <van-popup
+      show="{{ show }}"
+      position="bottom"
+      bind:close="onClose"
+      z-index="999"
+    >
+      <van-datetime-picker
+        type="datetime"
+        value="{{ currentDate }}"
+        min-date="{{ minDate }}"
+        max-date="{{ maxDate }}"
+        bind:input="onInput"
+        bind:confirm ="hasSure"
+        bind:cancel="onClose"
+       
+      />  
+    </van-popup>
+</view>

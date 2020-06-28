@@ -1,0 +1,74 @@
+/* pages/settings/setting.wxss */
+.conBox{
+  margin: 20rpx 0;
+  padding:  30rpx;
+  background: #fff;
+}
+.todoTitle{
+  position: relative;
+  height: 120rpx;
+  line-height: 110rpx;
+  padding-bottom: 10rpx;
+  /* border-bottom:1px solid rgba(238,238,238,1); */
+
+}
+.todoimg{
+  position: absolute;
+  width: 66rpx;
+  height:66rpx;
+  top:22rpx;
+  left:5rpx;
+}
+.p{
+  line-height: 100rpx;
+  padding-left:80rpx;
+  font-weight: bold; 
+}
+.iconUp {
+  position: absolute;
+  width: 46rpx;
+  height:46rpx;
+  top:32rpx;
+  right:0rpx;
+}
+.shareBox{
+  position: relative;
+  width: 132rpx;
+  height: 110rpx;
+  line-height: 110rpx;
+  float: right;
+  padding-left: 56rpx;
+  color: #1890FF;
+  font-size: 28rpx;
+}
+.iconShare {
+  position: absolute;
+  width: 46rpx;
+  height:46rpx;
+  top:32rpx;
+  left:0rpx;
+}
+.listDataBox{
+  position: relative;
+  width: 660rpx;
+  padding: 10rpx 0;
+  font-size: 32rpx;
+  color: #333;
+  line-height: 70rpx;
+  padding-right: 60rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.stateIcon{
+  position: absolute;
+  width: 46rpx;
+  height:46rpx;
+  top:50%;
+  margin-top: -23rpx;
+  right:10rpx;
+}
+.setBtn{
+  width: 320rpx;
+  margin: 0 8rpx;
+}

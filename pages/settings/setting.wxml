@@ -1,0 +1,65 @@
+<!--pages/settings/setting.wxml-->
+<view class="container">
+ <view class='nav bg-white'>
+    <navBar background='#fff' title="开始巡查"  back="{{true}}" home="{{true}}" bindback="handerback" bindhome="handerhome">    
+      </navBar>
+  </view>
+  <view class="box710 conBox hasShadow">
+     <comList 
+        title="{{title}}" 
+        busiState='{{busiState}}' 
+        time="{{time}}" 
+        terminationTime = "{{terminationTime}}" 
+        /> 
+  </view>
+  <view class="box710 conBox hasShadow" wx:if="{{busiState != 2}}"  wx:for="{{todoData}}"  data-item="item"  wx:for-index='ind'>
+    <view class="todoTitle" >
+      <image class="todoimg" src="{{item.iconUrl}}"  mode="cover"></image> 
+      <text class="p">{{item.maxCateName}} </text>
+      <image class="iconUp" wx:if="{{busiState != 4}}" src="../../img/{{item.tab == 1 ? 'icon_up':'icon_down'}}.png" data-tab="{{item.tab}}" bindtap="packUp" data-index="{{ind}}"></image>    
+    </view> 
+    <view class="box710 "   wx:for="{{item.child}}" wx:for-item="list" wx:for-index="cellindex" wx:if="{{item.tab == 1}}">
+      <view class="listDataBox" bindtap="todoList" data-id="{{list.groupCode}}" data-maxCateId="{{item.maxCateId}}" data-ind="{{ind}}"> {{list.title}} 
+        <image class="stateIcon"  wx:if="{{list.state == 0}}" src="../../img/icon_wwc1.png"></image>
+        <image class="stateIcon"  wx:if="{{list.state == 1}}" src="../../img/icon_wwc2.png"></image>
+        <image class="stateIcon"  wx:if="{{list.state == 2}}" src="../../img/icon_wwc3.png"></image>
+        <image class="stateIcon"  wx:if="{{list.state == 3}}" src="../../img/icon_tips11.png"></image>
+     </view>
+    </view>
+    
+  </view> 
+
+   <view class="box710 conBox hasShadow" wx:if="{{busiState == 2}}" >
+    <view class="todoTitle" >
+      <image class="todoimg" src="../../img/icon_bz4.png"  mode="cover"></image> 
+      <text class="p">待整改项 </text>
+      
+      <view class="shareBox" bindtap="getShare" data-url="{{shareUrl}}"> 
+         <image class="iconShare"  src="../../img/icon_share.png" ></image>
+         分享
+      </view>     
+    </view> 
+    <view wx:for="{{todoData}}"  data-item="item"  wx:for-index='ind'>
+      <view class="listDataBox" bindtap="todoList" data-patrolId="{{item.patrolId}}" data-minCateId="{{item.minCateId}}" data-ind="{{ind}}">      
+    <text wx:if="{{busiState != 2}}">  {{item.minCateName}} </text> 
+    <text wx:if="{{busiState == 2}}">  {{item.problemTitle}} </text> 
+        <!-- <image class="stateIcon"  wx:if="{{item.passSign == item.selOption}}" src="../../img/icon_wwc1.png"></image> -->
+        <image class="stateIcon"  wx:if="{{item.passSign == item.selOption}}" src="../../img/icon_wwc2.png"></image>
+        <image class="stateIcon"  wx:if="{{item.passSign != item.selOption}}" src="../../img/icon_wwc3.png"></image>
+        <!-- <image class="stateIcon"  wx:if="{{item.passSign == 3}}" src="../../img/icon_tips11.png"></image> -->
+      </view>
+    </view>  
+  </view> 
+   <view class="box680 " >
+      <view class="box680 " wx:if="{{busiState ==0 }}" >
+        <van-button type="info" block  bindtap="getSubmit">提交并评价</van-button>
+      </view>
+      <view class="box680 " wx:if="{{busiState ==1 }}" >
+        <van-button type="default" block  bindtap="getCheck">查看得分及评价</van-button>
+      </view>
+      <view   wx:if="{{busiState ==2 }}">
+        <van-button type="info" plain  bind:click="partRect" custom-class="setBtn">部分整改</van-button>
+        <van-button type="info" bind:click="allRect"   custom-class="setBtn">全部整改</van-button>
+      </view>
+    </view>
+  </view>

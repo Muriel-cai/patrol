@@ -1,0 +1,78 @@
+<!--pages/setInfo/setInfo.wxml-->
+<view class="container" >
+ <view class='nav bg-white'>
+    <navBar background='#fff' title="新增巡查"  back="{{true}}" home="{{false}}" bindback="handerback" bindhome="handerhome">    
+      </navBar>
+  </view>
+  <view class="blockB hasTop" id="mainBox">
+  
+    <van-cell-group adjust-position ="false">
+      <van-cell 
+        title="巡查机构" 
+        value="{{ comName }}" 
+        bind:click="getName" 
+        
+        />
+        <van-cell 
+        title="巡查时间" 
+        value="{{ xcTime }}" 
+        bind:click="getTime" 
+        
+        />
+      <!--  <van-field
+        value="{{ comName }}"
+        placeholder="请输入巡查机构名称"        
+        bind:focus="getName"
+        label="巡查机构"
+        border="{{ false }}"
+      /> 
+      <van-field
+        value="{{ xcTime }}"
+        placeholder="请选择巡查时间"        
+        bind:focus="getTime"
+        label="巡查时间"
+        border="{{ false }}"
+      /> -->
+    </van-cell-group>
+    </view>
+   <view class="box650 hasTop">
+    <van-button type="info" block bindtap="hasDone">开始巡查</van-button>
+  </view>
+
+    <van-popup
+      show="{{ show }}"      
+      bind:close="onClose"
+      position="bottom"
+      custom-style=" height:{{height}}"
+      
+    >
+    <!-- get-container="#mainBox"  -->
+    <view wx:if="{{isTime}}" class="blockB">
+      <van-datetime-picker
+        type="datetime"
+        value="{{ currentDate }}"
+        min-date="{{ minDate }}"
+        max-date="{{ maxDate }}"
+        bind:input="onInput"
+        bind:confirm ="hasSure"
+        bind:cancel="onClose"
+       
+      />
+    </view>
+    <view wx:if="{{!isTime}}" class="blockB">
+      <van-search value="{{ keyValue }}" input-align="center" bind:change="getValue"  placeholder="请输入搜索关键词" />
+      <van-picker 
+        columns="{{ organData }}" 
+        bind:change="onChange" 
+        bind:cancel="onClose"
+        bind:confirm="getNameSure"
+        value-key="organName"
+        show-toolbar= "true"
+        defaultIndex="0"
+      />
+    </view>
+    </van-popup>
+
+ 
+ 
+</view>

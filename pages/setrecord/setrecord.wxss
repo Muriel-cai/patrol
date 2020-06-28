@@ -1,0 +1,74 @@
+/* pages/setrecord/setrecord.wxss */
+.scoreBox{
+  width: 100%;
+  height: 260rpx;
+  background: #1890FF;
+  color: #fff;
+  text-align: center;
+  padding: 50rpx;
+}
+.h1{
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 72rpx;
+  font-weight: bold;
+}
+p{
+  height:60rpx;
+  line-height: 60rpx;
+  font-size: 32rpx;
+
+}
+.bgF8{
+  
+   background: #F8F8F8;
+   
+}
+.lineBox{
+  position: relative;
+  width: 100%;
+  height: 16rpx;
+}
+.textarea{
+  width: 680px;
+  height:72px!important;
+  line-height: 36px!important;
+  background: #F8F8F8!important;
+  padding: 10px 0;
+
+}
+.orNotBox{
+  width: 650rpx;
+  height: 80rpx;
+  line-height:80rpx;
+  font-size: 28rpx;
+  color:#666;
+  padding-left: 10rpx;  
+  /* border-bottom:1px solid rgba(221,221,221,0.5); */
+}
+
+.setorNot{
+  position: relative;
+  width: 110rpx;
+  height: 80rpx;
+  float: right;
+  padding-left: 50rpx;
+  
+}
+.setorNot text{ 
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+}
+.iconYN{  
+  position: absolute;
+  width: 36rpx;
+  height:36rpx;
+  top:22rpx;
+  left:0rpx;
+}
+.noteText{
+  font-size:28rpx;
+  line-height: 36rpx;
+  padding: 15rpx;
+}

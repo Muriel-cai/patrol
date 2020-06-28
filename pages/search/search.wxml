@@ -1,0 +1,30 @@
+<!--pages/search/search.wxml-->
+<view class="container">
+ <view class='nav bg-white'>
+    <navBar background='#fff' title="搜索"  back="{{true}}" home="{{true}}" bindback="handerback" bindhome="handerhome">    
+      </navBar>
+  </view>
+  <view class="blockB padd10">
+    <van-search
+      value="{{ searchValue }}"
+      placeholder="请输入搜索关键词"
+      use-action-slot
+      shape="round"
+      bind:change="onChange"
+     
+    >
+      <view slot="action" bind:tap="onClick">搜索</view>
+    </van-search>
+  </view>
+  <view class="conBox box710"  wx:for="{{content}}" wx:for-item="list" wx:for-index="cellindex">
+      <comList 
+      title="{{list.organName}}" 
+      state='{{list.state}}' 
+      time="{{list.startTime}}" 
+      id="{{list.id}}"
+      busiState="{{list.busiState}}"
+      terminationTime = "{{list.adjustEndTime}}" 
+      bindtoNext="toNext"
+    /> 
+  </view>  
+</view>

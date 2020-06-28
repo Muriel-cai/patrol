@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "navBar": "../navBar/navBar",
+    "comList": "../part/comList/comList",
+    "van-search": "@vant/weapp/search/index"
+  }
+}

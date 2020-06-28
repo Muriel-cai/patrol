@@ -1,0 +1,10 @@
+/* pages/search/search.wxss */
+.padd10{
+  padding:0 10rpx;
+}
+.conBox{
+  margin: 20rpx 0;
+  width: 750rpx;
+  padding:  30rpx;
+  background: #fff;
+}

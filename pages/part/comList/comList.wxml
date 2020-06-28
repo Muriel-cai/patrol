@@ -1,0 +1,15 @@
+<!--pages/part/comList/comList.wxml-->
+
+  <view class="box710" bindtap="toNext" data-id="{{id}}" 
+        data-organId="{{organId}}" data-state="{{busiState}}" >
+    <view class="companyName">{{title}} 
+      <text wx:if="{{busiState == 0}}" class="stateT colorR"> 进行中</text> 
+      <text wx:elif="{{busiState == 2}}" class="stateT colorR">整改中</text>
+      <text wx:elif="{{busiState == 3}}" class="stateT color9">已终止</text>
+      <text wx:elif="{{busiState == 1}}" class="stateT colorG">已完结</text>
+    </view>
+    <view class="textP color3">巡查时间：{{time}}</view>
+    <view wx:if="{{busiState == 2}}" class="textP colorO">{{terminationTime}}</view>
+    <view wx:if="{{busiState == 3}}" class="textP colorO">已终止</view>
+  </view>
+

@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "navBar": "../navBar/navBar",
+    "van-field": "@vant/weapp/field/index",
+    "van-button": "@vant/weapp/button",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index"
+  },
+  "enablePullDownRefresh" :true
+}
